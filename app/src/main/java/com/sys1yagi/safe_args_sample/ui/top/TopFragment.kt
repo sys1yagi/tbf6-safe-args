@@ -18,7 +18,7 @@ class TopFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        open_detail.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.detailFragment))
-        open_edit.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.editActivity))
+        open_detail.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_topFragment_to_detailFragment))
+        open_edit.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_topFragment_to_detailFragment))
     }
 }
