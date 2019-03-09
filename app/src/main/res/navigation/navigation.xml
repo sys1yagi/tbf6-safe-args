@@ -9,7 +9,13 @@
         <action android:id="@+id/action_topFragment_to_editActivity" app:destination="@id/editActivity"/>
     </fragment>
     <fragment android:id="@+id/detailFragment" android:name="com.sys1yagi.safe_args_sample.ui.detail.DetailFragment"
-              android:label="DetailFragment"/>
+              android:label="DetailFragment">
+        <argument android:name="id" app:argType="integer"/>
+        <argument android:name="title" app:argType="string"/>
+    </fragment>
     <activity android:id="@+id/editActivity" android:name="com.sys1yagi.safe_args_sample.ui.edit.EditActivity"
-              android:label="EditActivity"/>
+              android:label="EditActivity">
+        <argument android:name="id" app:argType="integer"/>
+        <argument android:name="title" app:argType="string"/>
+    </activity>
 </navigation>

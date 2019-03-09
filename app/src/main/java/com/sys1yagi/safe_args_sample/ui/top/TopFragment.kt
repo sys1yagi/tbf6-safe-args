@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.sys1yagi.safe_args_sample.R
+import com.sys1yagi.safe_args_sample.ui.detail.DetailFragmentArgs
+import com.sys1yagi.safe_args_sample.ui.edit.EditActivity
+import com.sys1yagi.safe_args_sample.ui.edit.EditActivityArgs
 import kotlinx.android.synthetic.main.fragment_top.*
 
 class TopFragment : Fragment() {
@@ -18,7 +21,23 @@ class TopFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        open_detail.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_topFragment_to_detailFragment))
-        open_edit.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_topFragment_to_detailFragment))
+        open_detail.setOnClickListener(
+            Navigation.createNavigateOnClickListener(
+                R.id.action_topFragment_to_detailFragment,
+                DetailFragmentArgs(
+                    id = 10,
+                    title = "Navigation Sample!"
+                ).toBundle()
+            )
+        )
+        open_edit.setOnClickListener(
+            Navigation.createNavigateOnClickListener(
+                R.id.action_topFragment_to_editActivity,
+                EditActivityArgs(
+                    id = 11,
+                    title = "Navigation!"
+                ).toBundle()
+            )
+        )
     }
 }
