@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/navigation" app:startDestination="@id/topFragment">
+
+    <fragment android:id="@+id/topFragment" android:name="com.sys1yagi.safe_args_sample.ui.top.TopFragment"
+              android:label="TopFragment">
+        <action android:id="@+id/action_topFragment_to_detailFragment" app:destination="@id/detailFragment"/>
+        <action android:id="@+id/action_topFragment_to_editActivity" app:destination="@id/editActivity"/>
+    </fragment>
+    <fragment android:id="@+id/detailFragment" android:name="com.sys1yagi.safe_args_sample.ui.detail.DetailFragment"
+              android:label="DetailFragment"/>
+    <activity android:id="@+id/editActivity" android:name="com.sys1yagi.safe_args_sample.ui.edit.EditActivity"
+              android:label="EditActivity"/>
+</navigation>
